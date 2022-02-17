@@ -18,7 +18,7 @@
               pathType: Prefix
               backend:
                 service:
-                  name: cien-accounts-master
+                  name: caf-accounts-master
                   port:
                     number: 80
     tls:
