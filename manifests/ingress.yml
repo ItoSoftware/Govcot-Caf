@@ -1,0 +1,27 @@
+  apiVersion: networking.k8s.io/v1
+  kind: Ingress
+  metadata:
+    annotations:
+      kubernetes.io/ingress.class: nginx
+      kubernetes.io/tls-acme: "true"
+      cert-manager.io/cluster-issuer: "letsencrypt-prod"
+      nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    name: caf-master
+    namespace: default
+  spec:
+    rules:
+      - host: caf.itofontic.co
+        http:
+          paths:
+
+            - path: /accounts
+              pathType: Prefix
+              backend:
+                service:
+                  name: cien-accounts-master
+                  port:
+                    number: 80
+    tls:
+    - secretName: caf-master-tls
+      hosts:
+        - caf.itofontic.co

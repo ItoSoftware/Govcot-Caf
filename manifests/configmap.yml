@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: caf-accounts-master
+data:
+  PROXY_ADDRESS_FORWARDING: 'true'
+

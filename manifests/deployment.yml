@@ -1,0 +1,68 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: caf-accounts-master
+spec:
+  selector:
+    matchLabels:
+      app: caf-accounts-master
+  template:
+    metadata:
+      labels:
+        app: caf-accounts-master
+    spec:
+      containers:
+      - name: caf-accounts-master
+        image: itosoftware.azurecr.io/caf-accounts-master
+        imagePullPolicy: IfNotPresent
+        ports:
+        - name: http
+          containerPort: 8080
+        env:
+          - name: DB_VENDOR
+            valueFrom:
+              secretKeyRef:
+                name: caf-accounts-master
+                key:  DB_VENDOR
+
+          - name: DB_ADDR
+            valueFrom:
+              secretKeyRef:
+                name: caf-accounts-master
+                key:  DB_ADDR
+
+          - name: DB_DATABASE
+            valueFrom:
+              secretKeyRef:
+                name: caf-accounts-master
+                key:  DB_DATABASE
+
+          - name: DB_USER
+            valueFrom:
+              secretKeyRef:
+                name: caf-accounts-master
+                key:  DB_USER
+
+          - name: DB_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: caf-accounts-master
+                key:  DB_PASSWORD
+
+          - name: KEYCLOAK_USER
+            valueFrom:
+              secretKeyRef:
+                name: caf-accounts-master
+                key:  KEYCLOAK_USER
+
+          - name: KEYCLOAK_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: caf-accounts-master
+                key:  KEYCLOAK_PASSWORD
+
+          - name: PROXY_ADDRESS_FORWARDING
+            valueFrom:
+              configMapKeyRef:
+                name: caf-accounts-master
+                key:  PROXY_ADDRESS_FORWARDING
