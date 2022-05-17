@@ -1,4 +1,4 @@
-FROM jboss/keycloak:12.0.4 AS base
+FROM quay.io/keycloak/keycloak:14.0.0 AS base
 COPY Themes/cien /opt/jboss/keycloak/themes/cien
 COPY Themes/ssigpd /opt/jboss/keycloak/themes/ssigpd
 COPY Themes/mintic /opt/jboss/keycloak/themes/mintic

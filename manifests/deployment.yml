@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: caf-accounts-master
-        image: localhost:32000/caf-accounts-master:01
+        image: localhost:32000/caf-accounts-master:02
         imagePullPolicy: IfNotPresent
         ports:
         - name: http
