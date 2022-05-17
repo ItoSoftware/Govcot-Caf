@@ -10,7 +10,7 @@
     namespace: default
   spec:
     rules:
-      - host: caf.itofontic.co
+      - host: auth.micoldig.tk
         http:
           paths:
 
@@ -24,4 +24,4 @@
     tls:
     - secretName: caf-master-tls
       hosts:
-        - caf.itofontic.co
+        - auth.micoldig.tk
