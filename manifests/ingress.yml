@@ -8,7 +8,7 @@
     namespace: default
   spec:
     rules:
-      - host: auth.micoldig.tk
+      - host: auth.micolombiadigital.gov.co
         http:
           paths:
 
@@ -22,4 +22,4 @@
     tls:
     - secretName: caf-master-tls
       hosts:
-        - auth.micoldig.tk
+        - auth.micolombiadigital.gov.co
