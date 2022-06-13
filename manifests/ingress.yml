@@ -10,7 +10,7 @@
     namespace: default
   spec:
     rules:
-      - host: caf.itofontic.co
+      - host: caf.itosoftware.com.co
         http:
           paths:
 
@@ -24,4 +24,4 @@
     tls:
     - secretName: caf-master-tls
       hosts:
-        - caf.itofontic.co
+        - caf.itosoftware.com.co
