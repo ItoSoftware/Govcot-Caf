@@ -70,6 +70,8 @@ stages:
             inputs:
               action: deploy
               manifests: |
+                $(Pipeline.Workspace)/manifests/configmap.yml
+                $(Pipeline.Workspace)/manifests/secrets.yml
                 $(Pipeline.Workspace)/manifests/deployment.yml
                 $(Pipeline.Workspace)/manifests/service.yml
               imagePullSecrets: |
