@@ -12,7 +12,7 @@ variables:
 
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: '0833a195-21ef-4971-985b-58de84b5f0be'
-  imageRepository: 'keycloak'
+  imageRepository: 'caf-accounts-master'
   containerRegistry: 'itocafregistry.azurecr.io'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
