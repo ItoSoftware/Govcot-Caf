@@ -13,7 +13,7 @@ variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: '4a5614d3-0d63-43c1-b9c1-afd68e2018c0'
   imageRepository: 'caf-accounts-master'
-  containerRegistry: 'itosoftware.azurecr.io'
+  containerRegistry: 'cafregistry.azurecr.io'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
   imagePullSecret: 'itosoftwarea6c6-auth'
