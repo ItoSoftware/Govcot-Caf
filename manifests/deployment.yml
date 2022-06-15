@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: caf-accounts-master
-        image: itocafregistry.azurecr.io/caf-accounts-master
+        image: cafregistry.azurecr.io/caf-accounts-master
         imagePullPolicy: IfNotPresent
         ports:
         - name: http
